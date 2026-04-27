@@ -2,7 +2,8 @@ const { test, expect } = require('@playwright/test');
 const { HomePage } = require('../pages/HomePage');
 const { CartPage } = require('../pages/CartPage');
 
-test('Add Book to Cart', async ({ page }) => {
+
+test('Deleting Book from Cart', async ({ page }) => {
     const homePage = new HomePage(page);
     const cartPage = new CartPage(page);
     
@@ -13,10 +14,10 @@ test('Add Book to Cart', async ({ page }) => {
 
   //  this.CartItem = page.locator('div.mui-f8tkvr-cart-item-card');
 
-    await expect(cartPage.DeleteButton).toBeVisible();
-    await expect(cartPage.BuyButton).toBeVisible();
+    await cartPage.DeleteButton.click(); 
+    await expect(cartPage.EmptyMessage).toBeVisible();
 
 
-//npx playwright test AddingToCart.spec.js --project=chromium --headed --debug
+//npx playwright test DeletingFromCart.spec.js --project=chromium --headed --debug
     
 });

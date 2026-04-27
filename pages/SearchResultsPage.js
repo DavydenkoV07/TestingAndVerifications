@@ -3,6 +3,7 @@ class SearchResultsPage {
         this.page = page;
         this.searchResults = page.locator('main .ui-catalog-card--variant-home');
         this.header = page.locator('h1');
+        this.ErrorMessage = page.locator('h2.mui-144dr41');
        
     }
 

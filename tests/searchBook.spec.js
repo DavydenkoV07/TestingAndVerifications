@@ -10,8 +10,11 @@ test('Пошук книги', async ({ page }) => {
     await homePage.open();
     await homePage.searchBook('Сяйво');
 
-   // await page.getByText('Сяйво').first().click();
-
     await expect(searchPage.header).toContainText('Сяйво');
-    
+
+   // await page.locator('a.ui-catalog-card--variant-default mui-1i20r6w-ui-catalog-card').first().click();
+
+    // a.ui-catalog-card--variant-default mui-1i20r6w-ui-catalog-card
+    //npx playwright test searchBook.spec.js --project=chromium --headed --debug
+
 });
