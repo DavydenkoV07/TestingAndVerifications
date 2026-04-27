@@ -7,6 +7,8 @@ class HomePage {
         this.cartButton = page.getByRole('button', { name: 'Кошик', exact: true });
         this.fictionDropdown = page.getByRole('navigation').getByText('Художні');
         this.scifi = page.getByRole('link', { name: 'Фантастика' });
+        this.AddToFavButton = page.getByRole('button', { name: 'Додати в улюблені' }).first();
+        this.AddToCartButton = page.getByRole('button', { name: 'Додати в кошик' }).first();
 
     }
 
@@ -22,6 +24,22 @@ class HomePage {
     async browseSciFi(){
         await this.fictionDropdown.hover();
         await this.scifi.click();
+    }
+
+    async AddToFav(){
+        await this.AddToFavButton.click();
+    }
+
+    async openFavs(){
+        await this.likedButton.click();
+    }
+
+    async AddToCart(){
+        await this.AddToCartButton.click();
+    }
+
+    async openCart(){
+        await this.cartButton.click();
     }
 
     
