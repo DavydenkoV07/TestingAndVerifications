@@ -9,12 +9,16 @@ test('Deleting Book from Cart', async ({ page }) => {
     
 
     await homePage.open();
+     await page.waitForTimeout(4000);
     await homePage.AddToCart();
+     await page.waitForTimeout(4000);
     await homePage.openCart();
+     await page.waitForTimeout(4000);
 
   //  this.CartItem = page.locator('div.mui-f8tkvr-cart-item-card');
 
     await cartPage.DeleteButton.click(); 
+     await page.waitForTimeout(2000);
     await expect(cartPage.EmptyMessage).toBeVisible();
 
 

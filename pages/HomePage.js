@@ -9,6 +9,8 @@ class HomePage {
         this.scifi = page.getByRole('link', { name: 'Фантастика' });
         this.AddToFavButton = page.getByRole('button', { name: 'Додати в улюблені' }).first();
         this.AddToCartButton = page.getByRole('button', { name: 'Додати в кошик' }).first();
+        this.AuthorsLink = page.getByRole('link', { name: 'Автори' });
+        this.ProposedBook = page.locator('a.mui-ji3plk-result-link');
 
     }
 

@@ -7,7 +7,9 @@ test('Book Search with False Value', async ({ page }) => {
     const searchPage = new SearchResultsPage(page);
 
     await homePage.open();
+    await page.waitForTimeout(4000);
     await homePage.searchBook('@@@');
+    await page.waitForTimeout(4000);
 
    // await page.getByText('Сяйво').first().click();
 

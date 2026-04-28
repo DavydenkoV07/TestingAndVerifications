@@ -8,7 +8,9 @@ test('Пошук книги', async ({ page }) => {
     const searchPage = new SearchResultsPage(page);
 
     await homePage.open();
+    await page.waitForTimeout(4000);
     await homePage.searchBook('Сяйво');
+    await page.waitForTimeout(4000);
 
     await expect(searchPage.header).toContainText('Сяйво');
 

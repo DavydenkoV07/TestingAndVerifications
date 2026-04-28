@@ -8,12 +8,16 @@ test('Add Book to Cart', async ({ page }) => {
     
 
     await homePage.open();
+    await page.waitForTimeout(4000);
     await homePage.AddToCart();
+    await page.waitForTimeout(4000);
     await homePage.openCart();
+    await page.waitForTimeout(2000);
 
   //  this.CartItem = page.locator('div.mui-f8tkvr-cart-item-card');
 
     await expect(cartPage.DeleteButton).toBeVisible();
+    await page.waitForTimeout(2000);
     await expect(cartPage.BuyButton).toBeVisible();
 
 
