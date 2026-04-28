@@ -42,13 +42,13 @@ test('Adding to Cart', async ({ page }) => {
 
     const bookPage = new BookPage(page);
     const cartPage = new CartPage(page);
-    await page.waitForTimeout(4000);
+    await page.waitForTimeout(2000);
     
     
     await bookPage.addToCart();
     await page.waitForTimeout(4000);
     await bookPage.CartButton.click();
-    await page.waitForTimeout(4000);
+    await page.waitForTimeout(3000);
     await expect(cartPage.BuyButton).toBeVisible();
 
 

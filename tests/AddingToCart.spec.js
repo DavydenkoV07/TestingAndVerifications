@@ -8,9 +8,9 @@ test('Add Book to Cart', async ({ page }) => {
     
 
     await homePage.open();
-    await page.waitForTimeout(4000);
+    await page.waitForTimeout(3000);
     await homePage.AddToCart();
-    await page.waitForTimeout(4000);
+    await page.waitForTimeout(3000);
     await homePage.openCart();
     await page.waitForTimeout(2000);
 
